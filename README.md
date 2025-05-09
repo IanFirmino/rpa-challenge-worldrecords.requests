@@ -44,6 +44,11 @@ e é capturado as principais informações por Record.
 
 Utilize o `main.py` com o comando abaixo para realizar a captura dos dados:
 ```
+python -m src.main get_by_category --category **categoria**
+```
+
+### Exemplos:
+```
 python -m src.main get_by_category --category "Maratonas"
 python -m src.main get_by_category --category "Aprendendo"
 python -m src.main get_by_category --category "Moda e maquiagem"
