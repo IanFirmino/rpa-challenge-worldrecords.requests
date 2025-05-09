@@ -94,7 +94,8 @@ def get_showcase_page():
             soup = BeautifulSoup(markup=response.text, features='html.parser' )
             return soup
         except Exception as ex:
-            return str(ex)
+            if attempt == 1:
+                return str(ex)
 
 def get_category_page(url):
     for attempt in range(2):
@@ -111,7 +112,8 @@ def get_category_page(url):
             soup = BeautifulSoup(markup=response.text, features='html.parser' )
             return soup
         except Exception as ex:
-            return str(ex)
+            if attempt == 1:
+                return str(ex)
 
 def get_record_page(url):
     for attempt in range(2):
@@ -128,7 +130,8 @@ def get_record_page(url):
             soup = BeautifulSoup(markup=response.text, features='html.parser' )
             return soup
         except Exception as ex:
-            return str(ex)
+            if attempt == 1:
+                return str(ex)
 
 def testeeee():
     res = find_records_by_category("Celebridade")
